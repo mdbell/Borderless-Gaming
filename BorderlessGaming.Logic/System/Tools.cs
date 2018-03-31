@@ -9,7 +9,6 @@ using System.Xml;
 using BorderlessGaming.Logic.Core;
 using BorderlessGaming.Logic.Models;
 using BorderlessGaming.Logic.Properties;
-using BorderlessGaming.Logic.Steam;
 using BorderlessGaming.Logic.System.Utilities;
 using Ionic.Zip;
 
@@ -69,10 +68,6 @@ namespace BorderlessGaming.Logic.System
             }
             Config.Load();
             LanguageManager.Load();
-            if (!Config.Instance.AppSettings.DisableSteamIntegration)
-            {
-                SteamApi.Init();
-            }
         }
 
         public static Rectangle GetContainingRectangle(Rectangle a, Rectangle b)
@@ -110,73 +105,6 @@ namespace BorderlessGaming.Logic.System
             using (var zip = ZipFile.Read(archiveFilenameIn))
             {
                 zip.ExtractAll(outFolder, ExtractExistingFileAction.OverwriteSilently);
-            }
-        }
-
-        public static void CheckForUpdates()
-        {
-            if (HasInternetConnection)
-            {
-                try
-                {
-                    var releasePageUrl = "";
-                    Version newVersion = null;
-                    const string versionConfig = "https://raw.github.com/Codeusa/Borderless-Gaming/master/version.xml";
-                    var reader = new XmlTextReader(versionConfig);
-                    reader.MoveToContent();
-                    var elementName = "";
-                    try
-                    {
-                        if (reader.NodeType == XmlNodeType.Element && reader.Name == "borderlessgaming")
-                        {
-                            while (reader.Read())
-                            {
-                                switch (reader.NodeType)
-                                {
-                                    case XmlNodeType.Element:
-                                        elementName = reader.Name;
-                                        break;
-                                    default:
-                                        if (reader.NodeType == XmlNodeType.Text && reader.HasValue)
-                                        {
-                                            switch (elementName)
-                                            {
-                                                case "version":
-                                                    newVersion = new Version(reader.Value);
-                                                    break;
-                                                case "url":
-                                                    releasePageUrl = reader.Value;
-                                                    break;
-                                            }
-                                        }
-                                        break;
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show(Resources.ErrorUpdates, Resources.ErrorHeader, MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        reader.Close();
-                    }
-
-                    var applicationVersion = Assembly.GetEntryAssembly().GetName().Version;
-                    if (applicationVersion.CompareTo(newVersion) < 0)
-                    {
-                        if (MessageBox.Show(Resources.InfoUpdateAvailable, Resources.InfoUpdatesHeader,
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                        {
-                            GotoSite(releasePageUrl);
-                        }
-                    }
-                }
-                catch
-                {
-                }
             }
         }
     }

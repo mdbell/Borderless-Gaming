@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows.Forms;
 using BorderlessGaming.Logic.Models;
 using BorderlessGaming.Logic.Properties;
-using BorderlessGaming.Logic.Steam;
 using BorderlessGaming.Logic.System.Utilities;
 
 namespace BorderlessGaming.Logic.Windows
@@ -208,13 +207,6 @@ namespace BorderlessGaming.Logic.Windows
             {
                 processDetails.MadeBorderless = true;
                 processDetails.MadeBorderlessAttempts++;
-            }
-            if (SteamApi.IsLoaded)
-            {
-                if (SteamApi.UnlockAchievement("FIRST_TIME_BORDERLESS"))
-                {
-                    Console.WriteLine("Great!");
-                }
             }
         }
 

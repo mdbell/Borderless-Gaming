@@ -88,7 +88,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Steam\SteamAPI.cs" />
     <Compile Include="System\AppEnvironment.cs" />
     <Compile Include="System\AutoStart.cs" />
     <Compile Include="System\StartupOptions.cs" />

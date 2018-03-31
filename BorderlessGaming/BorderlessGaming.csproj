@@ -246,8 +246,7 @@
     </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>copy $(SolutionDir)SteamLibs\* $(ProjectDir)$(OutDir)
-mkdir $(ProjectDir)$(OutDir)\Languages
+    <PreBuildEvent>mkdir $(ProjectDir)$(OutDir)\Languages
 copy $(SolutionDir)Languages\* $(ProjectDir)$(OutDir)\Languages\</PreBuildEvent>
   </PropertyGroup>
 </Project>
