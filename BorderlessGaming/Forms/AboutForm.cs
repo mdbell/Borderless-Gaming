@@ -43,7 +43,7 @@ namespace BorderlessGaming.Forms
 
         private void OpenGithubRepo(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Tools.GotoSite("https://github.com/Codeusa/Borderless-Gaming");
+            Tools.GotoSite("https://github.com/mdbell/Borderless-Gaming");
         }
 
         private void _impulserNameTag_Click(object sender, EventArgs e)

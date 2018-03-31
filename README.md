@@ -1,5 +1,3 @@
-# [Buy it on Steam!](http://store.steampowered.com/app/388080)
-
 # What is this?
 
 Borderless Gaming is a simple tool that will allow you to turn your windowed video games into "fullscreen" applications without all of the negative side effects
@@ -16,9 +14,6 @@ The project is open source under the [GNU General Public License v2.0](https://g
 
 ## How to install and run Borderless-Gaming
 
-#### Buy through Steam and run it
-[Can be purchased here](http://store.steampowered.com/app/388080).
-
 #### Install from Source
 
 - Clone with repository 
@@ -31,21 +26,21 @@ The project is open source under the [GNU General Public License v2.0](https://g
 
 
 #### Usage
-[A detailed guide can be found here](https://steamcommunity.com/app/388080/discussions/0/535151589899658778/).
+TODO fill in with a guide (There was a link to steam guide here before, it's subject to change/be different from our version)
 
 #### Need help?
 contact me on my [Website](http://andrew.im) 
 
-or if you're suffering from crashes or bugs submit information [here](https://github.com/Codeusa/Borderless-Gaming/issues?state=open)
+or if you're suffering from crashes or bugs submit information [here](https://github.com/mdbell/Borderless-Gaming/issues?state=open)
 
 
 ## Helping Borderless-Gaming 
 
 **I want to help with the code:** I accept pull-requests, please see the [Contributing to Borderless-Gaming](https://github.com/Codeusa/Borderless-Gaming/blob/master/CONTRIBUTING.md) guide for information on contributing to this project. And don't forget to add your contact informations on the AUTHORS list.
 
-**I found a bug:** File it as an [issue](https://github.com/Codeusa/Borderless-Gaming/issues) and please describe as much as possible the bug and the context.
+**I found a bug:** File it as an [issue](https://github.com/mdbell/Borderless-Gaming/issues) and please describe as much as possible the bug and the context.
 
-**I have a new suggestion:** For feature requests please first check [the issues list](https://github.com/Codeusa/Borderless-Gaming/issues) to see if it's already there. If not, feel free to file it as an issue and to define the label **enhancement**.
+**I have a new suggestion:** For feature requests please first check [the issues list](https://github.com/mdbell/Borderless-Gaming/issues) to see if it's already there. If not, feel free to file it as an issue and to define the label **enhancement**.
 
 # Code of Conduct
 
@@ -55,6 +50,3 @@ You are an adult and the expectation is that we all act like it.  This is not a 
 
 * **Twitter:** [@AndrewMD5](https://twitter.com/andrewmd5)
 * **Blog:** [blog.andrew.im](http://blog.andrew.im)
-
-# Join our Steam Group!
-[Borderless Gaming on Steam](https://steamcommunity.com/app/388080/discussions/)

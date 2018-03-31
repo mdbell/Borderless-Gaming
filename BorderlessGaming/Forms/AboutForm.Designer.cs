@@ -46,8 +46,6 @@
             this._stackOfPancakesGithubGlobe = new System.Windows.Forms.PictureBox();
             this._stackOfPancakesNameTag = new System.Windows.Forms.Label();
             this._copyrightLabel = new System.Windows.Forms.Label();
-            this._steamGroupLabel = new System.Windows.Forms.Label();
-            this._viewSteamGroupLinkLabel = new System.Windows.Forms.LinkLabel();
             this._codeusaSoftwareLogo = new System.Windows.Forms.PictureBox();
             this._madpewGithubGlobe = new System.Windows.Forms.PictureBox();
             this._madpewNametag = new System.Windows.Forms.Label();
@@ -174,18 +172,6 @@
             resources.ApplyResources(this._copyrightLabel, "_copyrightLabel");
             this._copyrightLabel.Name = "_copyrightLabel";
             // 
-            // _steamGroupLabel
-            // 
-            resources.ApplyResources(this._steamGroupLabel, "_steamGroupLabel");
-            this._steamGroupLabel.Name = "_steamGroupLabel";
-            // 
-            // _viewSteamGroupLinkLabel
-            // 
-            resources.ApplyResources(this._viewSteamGroupLinkLabel, "_viewSteamGroupLinkLabel");
-            this._viewSteamGroupLinkLabel.Name = "_viewSteamGroupLinkLabel";
-            this._viewSteamGroupLinkLabel.TabStop = true;
-            this._viewSteamGroupLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OpenSteamGroup);
-            // 
             // _codeusaSoftwareLogo
             // 
             resources.ApplyResources(this._codeusaSoftwareLogo, "_codeusaSoftwareLogo");
@@ -263,10 +249,8 @@
             this.Controls.Add(this._committersLabel);
             this.Controls.Add(this._ownerGithubGlobe);
             this.Controls.Add(this._ownerLabel);
-            this.Controls.Add(this._viewSteamGroupLinkLabel);
             this.Controls.Add(this._viewBlogLinkLabel);
             this.Controls.Add(this._viewGithubLinkLabel);
-            this.Controls.Add(this._steamGroupLabel);
             this.Controls.Add(this._blogLabel);
             this.Controls.Add(this._gitHubLabel);
             this.Controls.Add(this.versionLabel);
@@ -309,8 +293,6 @@
         private System.Windows.Forms.PictureBox _stackOfPancakesGithubGlobe;
         private System.Windows.Forms.Label _stackOfPancakesNameTag;
         private System.Windows.Forms.Label _copyrightLabel;
-        private System.Windows.Forms.Label _steamGroupLabel;
-        private System.Windows.Forms.LinkLabel _viewSteamGroupLinkLabel;
         private System.Windows.Forms.PictureBox _codeusaSoftwareLogo;
         private System.Windows.Forms.PictureBox _madpewGithubGlobe;
         private System.Windows.Forms.Label _madpewNametag;
