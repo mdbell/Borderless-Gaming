@@ -14,6 +14,14 @@ The project is open source under the [GNU General Public License v2.0](https://g
 
 ## How to install and run Borderless-Gaming
 
+#### Download Binary Release
+
+- Visit the latest [releases](https://github.com/mdbell/Borderless-Gaming/releases) page, and download the most recent build
+
+- Extract the zip file to a directory of your choice
+
+- use the "BorderlessGaming.exe" to start the software
+
 #### Install from Source
 
 - Clone with repository 
@@ -29,9 +37,7 @@ The project is open source under the [GNU General Public License v2.0](https://g
 TODO fill in with a guide (There was a link to steam guide here before, it's subject to change/be different from our version)
 
 #### Need help?
-contact me on my [Website](http://andrew.im) 
-
-or if you're suffering from crashes or bugs submit information [here](https://github.com/mdbell/Borderless-Gaming/issues?state=open)
+Open an issue [here](https://github.com/mdbell/Borderless-Gaming/issues) and I'll try to get back to you ASAP 
 
 
 ## Helping Borderless-Gaming 
