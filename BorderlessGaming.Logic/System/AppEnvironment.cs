@@ -20,77 +20,8 @@ namespace BorderlessGaming.Logic.System
         {
             get
             {
-                var versionInfo = FileVersionInfo.GetVersionInfo(Path);
-                var userAppData = GetUserAppDataPath();
-                try
-                {
-                    // No version!
-                    return Environment.GetEnvironmentVariable("AppData").Trim() + "\\" + versionInfo.CompanyName +
-                           "\\" + versionInfo.ProductName;
-                }
-                catch
-                {
-                }
-
-                try
-                {
-                    // Version, but chopped out
-                    return userAppData.Substring(0, userAppData.LastIndexOf("\\"));
-                }
-                catch
-                {
-                    try
-                    {
-                        // App launch folder
-                        var directoryInfo = new FileInfo(Path).Directory;
-                        var dir = directoryInfo.ToString();
-                        return Path.Substring(0, dir.LastIndexOf("\\", StringComparison.Ordinal));
-                    }
-                    catch
-                    {
-                        try
-                        {
-                            // Current working folder
-                            return Environment.CurrentDirectory;
-                        }
-                        catch
-                        {
-                            try
-                            {
-                                // Desktop
-                                return Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                            }
-                            catch
-                            {
-                                // Also current working folder
-                                return ".";
-                            }
-                        }
-                    }
-                }
+                return Directory.GetCurrentDirectory();
             }
-        }
-
-
-        private static string GetUserAppDataPath()
-        {
-            var path = string.Empty;
-
-            try
-            {
-                var assm = Assembly.GetEntryAssembly();
-                var at = typeof(AssemblyCompanyAttribute);
-                var r = assm.GetCustomAttributes(at, false);
-                var ct = (AssemblyCompanyAttribute) r[0];
-                path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                path += @"\" + ct.Company;
-                path += @"\" + assm.GetName().Version;
-            }
-            catch
-            {
-                //
-            }
-            return path;
         }
     }
 }
